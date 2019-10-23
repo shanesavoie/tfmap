@@ -14,6 +14,8 @@ go get -u github.com/shanesavoie/tfmap
 ```sh
 FROM golang as tfmap
 RUN go get -u github.com/shanesavoie/tfmap
+
+FROM <your-image>
 COPY --from=tfmap /go/bin/tfmap /usr/local/bin/tfmap
 ```
 
