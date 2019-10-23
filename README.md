@@ -10,15 +10,6 @@ Example: `MAP_foo=bar MAP_abc=123` = `{foo:bar, abc:123}`
 go get -u github.com/shanesavoie/tfmap
 ```
 
-#### Dockerfile
-```sh
-FROM golang as tfmap
-RUN go get -u github.com/shanesavoie/tfmap
-
-FROM <your-image>
-COPY --from=tfmap /go/bin/tfmap /usr/local/bin/tfmap
-```
-
 ## Usage
 * `--help` - Will list the available options.
 * `--whitelist=MAP_` - Will only take in environment variables with the specefied prefix.
