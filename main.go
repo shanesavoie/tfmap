@@ -15,7 +15,7 @@ var (
     env            = []string{}
     envMap         = make(map[string]string)
     whitelist      = kingpin.Flag("whitelist", "Prefix for whitelisting environment variables.").String()
-    export         = kingpin.Flag("export", "Export to environment variable.").Default("TF_VARS_my_map").String()
+    export         = kingpin.Flag("export", "Export to environment variable.").Default("TF_VAR_my_map").String()
 )
 
 func main() {
