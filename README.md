@@ -18,7 +18,7 @@ go get -u github.com/shanesavoie/tfmap
 ## Example
 ```sh
 $ MAP_foo=bar MAP_abc=123 tfmap --whitelist=MAP_ --export=TF_VAR_ecs_environment
-export TF_VAR_ecs_environment={"abc":"123","foo":"bar"}
+export TF_VAR_ecs_environment='{"abc":"123","foo":"bar"}'
 ```
 
 ## Apply to Terraform
