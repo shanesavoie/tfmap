@@ -35,7 +35,7 @@ func main() {
         envTmp := strings.SplitN(e, "=", 2)
         if(regMatch.MatchString(envTmp[0])) {
        	    envTmp[0] = regReplace.ReplaceAllString(envTmp[0], "")
-            envMap[strings.ToLower(envTmp[0])] = envTmp[1]
+            envMap[envTmp[0]] = envTmp[1]
         }
     }
 
