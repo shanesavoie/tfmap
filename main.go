@@ -44,5 +44,5 @@ func main() {
     if jsonErr != nil {
    	    log.Fatalf("error: failed to marshal to JSON: `%s`", jsonErr)
     }
-    fmt.Printf("export %s=%s\n", *export, json)
+    fmt.Printf("export %s='%s'\n", *export, json)
 }
