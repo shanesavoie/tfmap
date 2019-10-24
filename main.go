@@ -15,7 +15,7 @@ var (
     env            = []string{}
     envMap         = make(map[string]string)
     whitelist      = kingpin.Flag("whitelist", "Prefix for whitelisting environment variables.").String()
-    export         = kingpin.Flag("export", "Export to environment variable.").Default("TF_VARS_my_map").String()
+    export         = kingpin.Flag("export", "Export to environment variable.").Default("TF_VAR_my_map").String()
 )
 
 func main() {
@@ -44,5 +44,5 @@ func main() {
     if jsonErr != nil {
    	    log.Fatalf("error: failed to marshal to JSON: `%s`", jsonErr)
     }
-    fmt.Printf("export %s=%s\n", *export, json)
+    fmt.Printf("export %s='%s'\n", *export, json)
 }
